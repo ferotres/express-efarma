@@ -4,6 +4,7 @@ import morgan      from 'morgan'
 import compression from 'compression'
 import bodyParser  from 'body-parser'
 import cors        from 'cors'
+import connection  from './app/infrastructure/mongoose/conection'
 
 
 const settings = app => {
@@ -27,6 +28,8 @@ const settings = app => {
     }
 
     app.set('settings', SETTINGS)
+
+    connection(SETTINGS)
 
 }
 
