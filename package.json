@@ -1,0 +1,28 @@
+{
+  "name": "efarma.es",
+  "version": "1.0.0",
+  "description": "A sample app",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --require 'babel-register' api/src/app.js",
+    "build": "babel src -d dist/api"
+  },
+  "keywords": [
+    "nodejs",
+    "express"
+  ],
+  "author": "Antonio Fernandez",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "compression": "^1.7.3",
+    "cors": "^2.8.4",
+    "dotenv": "^6.1.0",
+    "express": "^4.16.4",
+    "mongoose": "^5.3.8"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "morgan": "^1.9.1"
+  }
+}
