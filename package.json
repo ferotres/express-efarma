@@ -1,18 +1,32 @@
 {
-  "name": "efarma.es",
+  "name": "efarma",
   "version": "1.0.0",
   "description": "A sample app",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "start": "node --require 'babel-register' api/src/app.js",
-    "build": "babel src -d dist/api"
+    "dist": "babel api/src -d dist/api"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ferotres/express-efarma.git"
   },
   "keywords": [
-    "nodejs",
-    "express"
+    "express.js"
   ],
-  "author": "Antonio Fernandez",
+  "author": "Toni Fernandez",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ferotres/express-efarma/issues"
+  },
+  "homepage": "https://github.com/ferotres/express-efarma#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "morgan": "^1.9.1"
+  },
   "dependencies": {
     "body-parser": "^1.18.3",
     "compression": "^1.7.3",
@@ -20,9 +34,5 @@
     "dotenv": "^6.1.0",
     "express": "^4.16.4",
     "mongoose": "^5.3.8"
-  },
-  "devDependencies": {
-    "babel-core": "^6.26.3",
-    "morgan": "^1.9.1"
   }
 }
