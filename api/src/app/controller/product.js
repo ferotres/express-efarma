@@ -1,27 +1,24 @@
 
 import express from 'express'
-import Product from './../model/product/product'
+import ProductReposiotry from './../model/product/productRepository'
 import {check, validationResult} from 'express-validator/check'
 
 const router = express.Router()
-
+const productRepository = new ProductReposiotry()
 
 /**
  *  GET /product
  */
 router.get('/', (request, response) => {
 
-    Product
-        .find({})
-        .exec()
-        .then(collection => {
-            response.json(collection)
-        })
-        .catch(reason => {
-            return response
-                .status(500)
-                .json({error: reason})
-        })
+    let products = productRepository.getAllProducts()
+
+
+
+    products.then((productsCollection) => {
+        return response
+            .json(productsCollection)
+    })
 
 })
 
