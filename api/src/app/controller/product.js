@@ -13,8 +13,6 @@ router.get('/', (request, response) => {
 
     let products = productRepository.getAllProducts()
 
-
-
     products.then((productsCollection) => {
         return response
             .json(productsCollection)
